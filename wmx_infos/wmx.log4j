@@ -1,0 +1,247 @@
+[INFO ] 2020-01-21 11:29:47,307(0) --> [main] com.activiti.study.MainApp.main(MainApp.java:28):  App start...  
+[INFO ] 2020-01-21 11:29:48,989(1682) --> [main] org.activiti.engine.compatibility.DefaultActiviti5CompatibilityHandlerFactory.createActiviti5CompatibilityHandler(DefaultActiviti5CompatibilityHandlerFactory.java:38): Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.  
+[INFO ] 2020-01-21 11:29:49,035(1728) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on engine with resource org/activiti/db/create/activiti.h2.create.engine.sql  
+[INFO ] 2020-01-21 11:29:49,116(1809) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on history with resource org/activiti/db/create/activiti.h2.create.history.sql  
+[INFO ] 2020-01-21 11:29:49,127(1820) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on identity with resource org/activiti/db/create/activiti.h2.create.identity.sql  
+[INFO ] 2020-01-21 11:29:49,134(1827) --> [main] org.activiti.engine.impl.ProcessEngineImpl.<init>(ProcessEngineImpl.java:87): ProcessEngine default created  
+[INFO ] 2020-01-21 11:29:49,158(1851) --> [main] com.activiti.study.MainApp.getProcessEngine(MainApp.java:160): 流程引擎名称 [default]，版本 [6.0.0.4]  
+[INFO ] 2020-01-21 11:29:49,663(2356) --> [main] com.activiti.study.MainApp.getProcessDefinition(MainApp.java:135): 部署id [1],部署key [null],部署名称 [null],部署时间 [Tue Jan 21 11:29:49 CST 2020]  
+[INFO ] 2020-01-21 11:29:49,676(2369) --> [main] com.activiti.study.MainApp.getProcessDefinition(MainApp.java:144): 流程定义文件名 [二级审批流程]，流程id [approvalFor2Level:1:4],流程key [approvalFor2Level]  
+[INFO ] 2020-01-21 11:29:49,700(2393) --> [main] com.activiti.study.MainApp.getProcessInstance(MainApp.java:112): 启动流程，流程key [approvalFor2Level]   
+[INFO ] 2020-01-21 11:29:49,712(2405) --> [main] com.activiti.study.MainApp.handlingTasks(MainApp.java:57): 当前待处理任务id [9]，任务名称 [填写审批信息]  
+[INFO ] 2020-01-21 11:29:49,725(2418) --> [main] com.activiti.study.MainApp.getStringObjectMap(MainApp.java:87): 请输入 申请信息  
+[INFO ] 2020-01-21 11:40:16,243(0) --> [main] com.activiti.study.MyProcessApp.main(MyProcessApp.java:29):  App start...  
+[INFO ] 2020-01-21 11:40:18,101(1858) --> [main] org.activiti.engine.compatibility.DefaultActiviti5CompatibilityHandlerFactory.createActiviti5CompatibilityHandler(DefaultActiviti5CompatibilityHandlerFactory.java:38): Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.  
+[INFO ] 2020-01-21 11:40:18,148(1905) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on engine with resource org/activiti/db/create/activiti.h2.create.engine.sql  
+[INFO ] 2020-01-21 11:40:18,234(1991) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on history with resource org/activiti/db/create/activiti.h2.create.history.sql  
+[INFO ] 2020-01-21 11:40:18,246(2003) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on identity with resource org/activiti/db/create/activiti.h2.create.identity.sql  
+[INFO ] 2020-01-21 11:40:18,257(2014) --> [main] org.activiti.engine.impl.ProcessEngineImpl.<init>(ProcessEngineImpl.java:87): ProcessEngine default created  
+[INFO ] 2020-01-21 11:40:18,282(2039) --> [main] com.activiti.study.MyProcessApp.getProcessEngine(MyProcessApp.java:161): 流程引擎名称 [default]，版本 [6.0.0.4]  
+[ERROR] 2020-01-21 11:40:18,513(2270) --> [main] org.activiti.engine.impl.interceptor.CommandContext.logException(CommandContext.java:122): Error while closing command context  
+org.activiti.bpmn.exceptions.XMLException: cvc-id.2: ID 值 'managerApproval' 出现了多次。
+	at org.activiti.bpmn.converter.BpmnXMLConverter.convertToBpmnModel(BpmnXMLConverter.java:280)
+	at org.activiti.engine.impl.bpmn.parser.BpmnParse.execute(BpmnParse.java:148)
+	at org.activiti.engine.impl.bpmn.deployer.ParsedDeploymentBuilder.createBpmnParseFromResource(ParsedDeploymentBuilder.java:96)
+	at org.activiti.engine.impl.bpmn.deployer.ParsedDeploymentBuilder.build(ParsedDeploymentBuilder.java:55)
+	at org.activiti.engine.impl.bpmn.deployer.BpmnDeployer.deploy(BpmnDeployer.java:71)
+	at org.activiti.engine.impl.persistence.deploy.DeploymentManager.deploy(DeploymentManager.java:60)
+	at org.activiti.engine.impl.cmd.DeployCmd.executeDeploy(DeployCmd.java:110)
+	at org.activiti.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:60)
+	at org.activiti.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:40)
+	at org.activiti.engine.impl.interceptor.CommandInvoker$1.run(CommandInvoker.java:37)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:78)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:57)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:42)
+	at org.activiti.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:48)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:63)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:29)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:44)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:39)
+	at org.activiti.engine.impl.RepositoryServiceImpl.deploy(RepositoryServiceImpl.java:86)
+	at org.activiti.engine.impl.repository.DeploymentBuilderImpl.deploy(DeploymentBuilderImpl.java:188)
+	at com.activiti.study.MyProcessApp.getProcessDefinition(MyProcessApp.java:129)
+	at com.activiti.study.MyProcessApp.main(MyProcessApp.java:35)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 20; columnNumber: 48; cvc-id.2: ID 值 'managerApproval' 出现了多次。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:452)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3230)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processOneAttribute(XMLSchemaValidator.java:2825)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processAttributes(XMLSchemaValidator.java:2762)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2050)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:740)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:374)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.StreamValidatorHelper.validate(StreamValidatorHelper.java:155)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorImpl.validate(ValidatorImpl.java:116)
+	at javax.xml.validation.Validator.validate(Validator.java:124)
+	at org.activiti.bpmn.converter.BpmnXMLConverter.validateModel(BpmnXMLConverter.java:214)
+	at org.activiti.bpmn.converter.BpmnXMLConverter.convertToBpmnModel(BpmnXMLConverter.java:269)
+	... 21 more
+[INFO ] 2020-01-21 11:42:09,434(0) --> [main] com.activiti.study.MyProcessApp.main(MyProcessApp.java:29):  App start...  
+[INFO ] 2020-01-21 11:42:11,066(1632) --> [main] org.activiti.engine.compatibility.DefaultActiviti5CompatibilityHandlerFactory.createActiviti5CompatibilityHandler(DefaultActiviti5CompatibilityHandlerFactory.java:38): Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.  
+[INFO ] 2020-01-21 11:42:11,109(1675) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on engine with resource org/activiti/db/create/activiti.h2.create.engine.sql  
+[INFO ] 2020-01-21 11:42:11,184(1750) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on history with resource org/activiti/db/create/activiti.h2.create.history.sql  
+[INFO ] 2020-01-21 11:42:11,193(1759) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on identity with resource org/activiti/db/create/activiti.h2.create.identity.sql  
+[INFO ] 2020-01-21 11:42:11,200(1766) --> [main] org.activiti.engine.impl.ProcessEngineImpl.<init>(ProcessEngineImpl.java:87): ProcessEngine default created  
+[INFO ] 2020-01-21 11:42:11,221(1787) --> [main] com.activiti.study.MyProcessApp.getProcessEngine(MyProcessApp.java:161): 流程引擎名称 [default]，版本 [6.0.0.4]  
+[ERROR] 2020-01-21 11:42:11,447(2013) --> [main] org.activiti.engine.impl.interceptor.CommandContext.logException(CommandContext.java:122): Error while closing command context  
+org.activiti.bpmn.exceptions.XMLException: cvc-id.2: ID 值 'managerApproval' 出现了多次。
+	at org.activiti.bpmn.converter.BpmnXMLConverter.convertToBpmnModel(BpmnXMLConverter.java:280)
+	at org.activiti.engine.impl.bpmn.parser.BpmnParse.execute(BpmnParse.java:148)
+	at org.activiti.engine.impl.bpmn.deployer.ParsedDeploymentBuilder.createBpmnParseFromResource(ParsedDeploymentBuilder.java:96)
+	at org.activiti.engine.impl.bpmn.deployer.ParsedDeploymentBuilder.build(ParsedDeploymentBuilder.java:55)
+	at org.activiti.engine.impl.bpmn.deployer.BpmnDeployer.deploy(BpmnDeployer.java:71)
+	at org.activiti.engine.impl.persistence.deploy.DeploymentManager.deploy(DeploymentManager.java:60)
+	at org.activiti.engine.impl.cmd.DeployCmd.executeDeploy(DeployCmd.java:110)
+	at org.activiti.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:60)
+	at org.activiti.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:40)
+	at org.activiti.engine.impl.interceptor.CommandInvoker$1.run(CommandInvoker.java:37)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:78)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:57)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:42)
+	at org.activiti.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:48)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:63)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:29)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:44)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:39)
+	at org.activiti.engine.impl.RepositoryServiceImpl.deploy(RepositoryServiceImpl.java:86)
+	at org.activiti.engine.impl.repository.DeploymentBuilderImpl.deploy(DeploymentBuilderImpl.java:188)
+	at com.activiti.study.MyProcessApp.getProcessDefinition(MyProcessApp.java:129)
+	at com.activiti.study.MyProcessApp.main(MyProcessApp.java:35)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 19; columnNumber: 48; cvc-id.2: ID 值 'managerApproval' 出现了多次。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:452)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3230)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processOneAttribute(XMLSchemaValidator.java:2825)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processAttributes(XMLSchemaValidator.java:2762)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2050)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:740)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:374)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.StreamValidatorHelper.validate(StreamValidatorHelper.java:155)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorImpl.validate(ValidatorImpl.java:116)
+	at javax.xml.validation.Validator.validate(Validator.java:124)
+	at org.activiti.bpmn.converter.BpmnXMLConverter.validateModel(BpmnXMLConverter.java:214)
+	at org.activiti.bpmn.converter.BpmnXMLConverter.convertToBpmnModel(BpmnXMLConverter.java:269)
+	... 21 more
+[INFO ] 2020-01-21 11:43:03,505(0) --> [main] com.activiti.study.MyProcessApp.main(MyProcessApp.java:29):  App start...  
+[INFO ] 2020-01-21 11:43:04,843(1338) --> [main] org.activiti.engine.compatibility.DefaultActiviti5CompatibilityHandlerFactory.createActiviti5CompatibilityHandler(DefaultActiviti5CompatibilityHandlerFactory.java:38): Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.  
+[INFO ] 2020-01-21 11:43:04,883(1378) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on engine with resource org/activiti/db/create/activiti.h2.create.engine.sql  
+[INFO ] 2020-01-21 11:43:04,951(1446) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on history with resource org/activiti/db/create/activiti.h2.create.history.sql  
+[INFO ] 2020-01-21 11:43:04,963(1458) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on identity with resource org/activiti/db/create/activiti.h2.create.identity.sql  
+[INFO ] 2020-01-21 11:43:04,969(1464) --> [main] org.activiti.engine.impl.ProcessEngineImpl.<init>(ProcessEngineImpl.java:87): ProcessEngine default created  
+[INFO ] 2020-01-21 11:43:04,990(1485) --> [main] com.activiti.study.MyProcessApp.getProcessEngine(MyProcessApp.java:161): 流程引擎名称 [default]，版本 [6.0.0.4]  
+[ERROR] 2020-01-21 11:43:14,261(10756) --> [main] org.activiti.engine.impl.interceptor.CommandContext.logException(CommandContext.java:122): Error while closing command context  
+org.activiti.bpmn.exceptions.XMLException: cvc-id.2: ID 值 'managerApproval' 出现了多次。
+	at org.activiti.bpmn.converter.BpmnXMLConverter.convertToBpmnModel(BpmnXMLConverter.java:280)
+	at org.activiti.engine.impl.bpmn.parser.BpmnParse.execute(BpmnParse.java:148)
+	at org.activiti.engine.impl.bpmn.deployer.ParsedDeploymentBuilder.createBpmnParseFromResource(ParsedDeploymentBuilder.java:96)
+	at org.activiti.engine.impl.bpmn.deployer.ParsedDeploymentBuilder.build(ParsedDeploymentBuilder.java:55)
+	at org.activiti.engine.impl.bpmn.deployer.BpmnDeployer.deploy(BpmnDeployer.java:71)
+	at org.activiti.engine.impl.persistence.deploy.DeploymentManager.deploy(DeploymentManager.java:60)
+	at org.activiti.engine.impl.cmd.DeployCmd.executeDeploy(DeployCmd.java:110)
+	at org.activiti.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:60)
+	at org.activiti.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:40)
+	at org.activiti.engine.impl.interceptor.CommandInvoker$1.run(CommandInvoker.java:37)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:78)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:57)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:42)
+	at org.activiti.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:48)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:63)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:29)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:44)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:39)
+	at org.activiti.engine.impl.RepositoryServiceImpl.deploy(RepositoryServiceImpl.java:86)
+	at org.activiti.engine.impl.repository.DeploymentBuilderImpl.deploy(DeploymentBuilderImpl.java:188)
+	at com.activiti.study.MyProcessApp.getProcessDefinition(MyProcessApp.java:129)
+	at com.activiti.study.MyProcessApp.main(MyProcessApp.java:35)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 19; columnNumber: 48; cvc-id.2: ID 值 'managerApproval' 出现了多次。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:452)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3230)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processOneAttribute(XMLSchemaValidator.java:2825)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processAttributes(XMLSchemaValidator.java:2762)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2050)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:740)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:374)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.StreamValidatorHelper.validate(StreamValidatorHelper.java:155)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorImpl.validate(ValidatorImpl.java:116)
+	at javax.xml.validation.Validator.validate(Validator.java:124)
+	at org.activiti.bpmn.converter.BpmnXMLConverter.validateModel(BpmnXMLConverter.java:214)
+	at org.activiti.bpmn.converter.BpmnXMLConverter.convertToBpmnModel(BpmnXMLConverter.java:269)
+	... 21 more
+[INFO ] 2020-01-21 11:51:41,208(0) --> [main] com.activiti.study.MyProcessApp.main(MyProcessApp.java:29):  App start...  
+[INFO ] 2020-01-21 11:51:42,917(1709) --> [main] org.activiti.engine.compatibility.DefaultActiviti5CompatibilityHandlerFactory.createActiviti5CompatibilityHandler(DefaultActiviti5CompatibilityHandlerFactory.java:38): Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.  
+[INFO ] 2020-01-21 11:51:42,968(1760) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on engine with resource org/activiti/db/create/activiti.h2.create.engine.sql  
+[INFO ] 2020-01-21 11:51:43,059(1851) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on history with resource org/activiti/db/create/activiti.h2.create.history.sql  
+[INFO ] 2020-01-21 11:51:43,070(1862) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on identity with resource org/activiti/db/create/activiti.h2.create.identity.sql  
+[INFO ] 2020-01-21 11:51:43,078(1870) --> [main] org.activiti.engine.impl.ProcessEngineImpl.<init>(ProcessEngineImpl.java:87): ProcessEngine default created  
+[INFO ] 2020-01-21 11:51:43,111(1903) --> [main] com.activiti.study.MyProcessApp.getProcessEngine(MyProcessApp.java:161): 流程引擎名称 [default]，版本 [6.0.0.4]  
+[INFO ] 2020-01-21 11:53:14,072(0) --> [main] com.activiti.study.MyProcessApp.main(MyProcessApp.java:29):  App start...  
+[INFO ] 2020-01-21 11:53:15,622(1550) --> [main] org.activiti.engine.compatibility.DefaultActiviti5CompatibilityHandlerFactory.createActiviti5CompatibilityHandler(DefaultActiviti5CompatibilityHandlerFactory.java:38): Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.  
+[INFO ] 2020-01-21 11:53:15,675(1603) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on engine with resource org/activiti/db/create/activiti.h2.create.engine.sql  
+[INFO ] 2020-01-21 11:53:15,755(1683) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on history with resource org/activiti/db/create/activiti.h2.create.history.sql  
+[INFO ] 2020-01-21 11:53:15,766(1694) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on identity with resource org/activiti/db/create/activiti.h2.create.identity.sql  
+[INFO ] 2020-01-21 11:53:15,774(1702) --> [main] org.activiti.engine.impl.ProcessEngineImpl.<init>(ProcessEngineImpl.java:87): ProcessEngine default created  
+[INFO ] 2020-01-21 11:53:15,797(1725) --> [main] com.activiti.study.MyProcessApp.getProcessEngine(MyProcessApp.java:161): 流程引擎名称 [default]，版本 [6.0.0.4]  
+[INFO ] 2020-01-21 11:53:33,058(18986) --> [main] com.activiti.study.MyProcessApp.getProcessDefinition(MyProcessApp.java:136): 部署id [1],部署key [null],部署名称 [null],部署时间 [Tue Jan 21 11:53:28 CST 2020]  
+[INFO ] 2020-01-21 11:53:33,079(19007) --> [main] com.activiti.study.MyProcessApp.getProcessDefinition(MyProcessApp.java:145): 流程定义文件名 [二级直批流程]，流程id [myProcess:1:4],流程key [myProcess]  
+[INFO ] 2020-01-21 11:53:33,119(19047) --> [main] com.activiti.study.MyProcessApp.getProcessInstance(MyProcessApp.java:113): 启动流程，流程key [myProcess]   
+[INFO ] 2020-01-21 11:53:33,134(19062) --> [main] com.activiti.study.MyProcessApp.handlingTasks(MyProcessApp.java:58): 当前待处理任务id [10]，任务名称 [User Task]  
+[INFO ] 2020-01-21 11:53:33,178(19106) --> [main] com.activiti.study.MyProcessApp.handlingTasks(MyProcessApp.java:58): 当前待处理任务id [12]，任务名称 [填写审批信息]  
+[INFO ] 2020-01-21 11:53:33,182(19110) --> [main] com.activiti.study.MyProcessApp.getStringObjectMap(MyProcessApp.java:88): 请输入 姓名  
+[INFO ] 2020-01-21 11:53:41,600(27528) --> [main] com.activiti.study.MyProcessApp.getStringObjectMap(MyProcessApp.java:98): 您成功输入 [wmx]  
+[INFO ] 2020-01-21 11:53:41,600(27528) --> [main] com.activiti.study.MyProcessApp.getStringObjectMap(MyProcessApp.java:88): 请输入 内容  
+[INFO ] 2020-01-21 11:53:43,824(29752) --> [main] com.activiti.study.MyProcessApp.getStringObjectMap(MyProcessApp.java:98): 您成功输入 [mm]  
+[INFO ] 2020-01-21 11:53:43,851(29779) --> [main] com.activiti.study.MyProcessApp.handlingTasks(MyProcessApp.java:58): 当前待处理任务id [16]，任务名称 [人事审批]  
+[INFO ] 2020-01-21 11:53:43,858(29786) --> [main] com.activiti.study.MyProcessApp.getStringObjectMap(MyProcessApp.java:88): 请输入 审批结果  
+[INFO ] 2020-01-21 11:53:50,985(36913) --> [main] com.activiti.study.MyProcessApp.getStringObjectMap(MyProcessApp.java:98): 您成功输入 [n]  
+[INFO ] 2020-01-21 11:53:51,007(36935) --> [main] com.activiti.study.MyProcessApp.main(MyProcessApp.java:42):  App quit...  
+[INFO ] 2020-01-21 11:54:31,229(0) --> [main] com.activiti.study.MyProcessApp.main(MyProcessApp.java:29):  App start...  
+[INFO ] 2020-01-21 11:54:32,984(1755) --> [main] org.activiti.engine.compatibility.DefaultActiviti5CompatibilityHandlerFactory.createActiviti5CompatibilityHandler(DefaultActiviti5CompatibilityHandlerFactory.java:38): Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.  
+[INFO ] 2020-01-21 11:54:33,033(1804) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on engine with resource org/activiti/db/create/activiti.h2.create.engine.sql  
+[INFO ] 2020-01-21 11:54:33,124(1895) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on history with resource org/activiti/db/create/activiti.h2.create.history.sql  
+[INFO ] 2020-01-21 11:54:33,136(1907) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on identity with resource org/activiti/db/create/activiti.h2.create.identity.sql  
+[INFO ] 2020-01-21 11:54:33,146(1917) --> [main] org.activiti.engine.impl.ProcessEngineImpl.<init>(ProcessEngineImpl.java:87): ProcessEngine default created  
+[INFO ] 2020-01-21 11:54:33,175(1946) --> [main] com.activiti.study.MyProcessApp.getProcessEngine(MyProcessApp.java:161): 流程引擎名称 [default]，版本 [6.0.0.4]  
+[INFO ] 2020-01-21 11:54:33,711(2482) --> [main] com.activiti.study.MyProcessApp.getProcessDefinition(MyProcessApp.java:136): 部署id [1],部署key [null],部署名称 [null],部署时间 [Tue Jan 21 11:54:33 CST 2020]  
+[INFO ] 2020-01-21 11:54:33,725(2496) --> [main] com.activiti.study.MyProcessApp.getProcessDefinition(MyProcessApp.java:145): 流程定义文件名 [二级直批流程]，流程id [myProcess:1:4],流程key [myProcess]  
+[INFO ] 2020-01-21 11:54:33,766(2537) --> [main] com.activiti.study.MyProcessApp.getProcessInstance(MyProcessApp.java:113): 启动流程，流程key [myProcess]   
+[INFO ] 2020-01-21 11:54:33,784(2555) --> [main] com.activiti.study.MyProcessApp.handlingTasks(MyProcessApp.java:58): 当前待处理任务id [10]，任务名称 [User Task]  
+[INFO ] 2020-01-21 11:54:33,822(2593) --> [main] com.activiti.study.MyProcessApp.handlingTasks(MyProcessApp.java:58): 当前待处理任务id [12]，任务名称 [填写审批信息]  
+[INFO ] 2020-01-21 11:54:33,826(2597) --> [main] com.activiti.study.MyProcessApp.getStringObjectMap(MyProcessApp.java:88): 请输入 姓名  
+[INFO ] 2020-01-21 11:54:43,543(12314) --> [main] com.activiti.study.MyProcessApp.getStringObjectMap(MyProcessApp.java:98): 您成功输入 [汪茂雄]  
+[INFO ] 2020-01-21 11:54:43,544(12315) --> [main] com.activiti.study.MyProcessApp.getStringObjectMap(MyProcessApp.java:88): 请输入 内容  
+[INFO ] 2020-01-21 11:54:48,841(17612) --> [main] com.activiti.study.MyProcessApp.getStringObjectMap(MyProcessApp.java:98): 您成功输入 [请假]  
+[INFO ] 2020-01-21 11:54:48,860(17631) --> [main] com.activiti.study.MyProcessApp.handlingTasks(MyProcessApp.java:58): 当前待处理任务id [16]，任务名称 [人事审批]  
+[INFO ] 2020-01-21 11:54:48,862(17633) --> [main] com.activiti.study.MyProcessApp.getStringObjectMap(MyProcessApp.java:88): 请输入 审批结果  
+[INFO ] 2020-01-21 11:55:08,688(37459) --> [main] com.activiti.study.MyProcessApp.getStringObjectMap(MyProcessApp.java:98): 您成功输入 [同意]  
+[INFO ] 2020-01-21 11:55:08,705(37476) --> [main] com.activiti.study.MyProcessApp.main(MyProcessApp.java:42):  App quit...  
+[INFO ] 2020-01-21 14:16:57,641(0) --> [main] com.activiti.study.MyProcessApp.main(MyProcessApp.java:29):  App start...  
+[INFO ] 2020-01-21 14:17:01,258(3617) --> [main] org.activiti.engine.compatibility.DefaultActiviti5CompatibilityHandlerFactory.createActiviti5CompatibilityHandler(DefaultActiviti5CompatibilityHandlerFactory.java:38): Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.  
+[INFO ] 2020-01-21 14:17:01,321(3680) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on engine with resource org/activiti/db/create/activiti.h2.create.engine.sql  
+[INFO ] 2020-01-21 14:17:01,410(3769) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on history with resource org/activiti/db/create/activiti.h2.create.history.sql  
+[INFO ] 2020-01-21 14:17:01,423(3782) --> [main] org.activiti.engine.impl.db.DbSqlSession.executeSchemaResource(DbSqlSession.java:1147): performing create on identity with resource org/activiti/db/create/activiti.h2.create.identity.sql  
+[INFO ] 2020-01-21 14:17:01,430(3789) --> [main] org.activiti.engine.impl.ProcessEngineImpl.<init>(ProcessEngineImpl.java:87): ProcessEngine default created  
+[INFO ] 2020-01-21 14:17:01,459(3818) --> [main] com.activiti.study.MyProcessApp.getProcessEngine(MyProcessApp.java:161): 流程引擎名称 [default]，版本 [6.0.0.4]  
+[INFO ] 2020-01-21 14:17:02,124(4483) --> [main] com.activiti.study.MyProcessApp.getProcessDefinition(MyProcessApp.java:136): 部署id [1],部署key [null],部署名称 [null],部署时间 [Tue Jan 21 14:17:01 CST 2020]  
+[INFO ] 2020-01-21 14:17:02,139(4498) --> [main] com.activiti.study.MyProcessApp.getProcessDefinition(MyProcessApp.java:145): 流程定义文件名 [一级直批流程]，流程id [myProcess:1:4],流程key [myProcess]  
+[INFO ] 2020-01-21 14:17:02,171(4530) --> [main] com.activiti.study.MyProcessApp.getProcessInstance(MyProcessApp.java:113): 启动流程，流程key [myProcess]   
+[INFO ] 2020-01-21 14:17:02,184(4543) --> [main] com.activiti.study.MyProcessApp.handlingTasks(MyProcessApp.java:58): 当前待处理任务id [10]，任务名称 [User Task]  
+[INFO ] 2020-01-21 14:17:02,215(4574) --> [main] com.activiti.study.MyProcessApp.handlingTasks(MyProcessApp.java:58): 当前待处理任务id [12]，任务名称 [填写审批信息]  
+[INFO ] 2020-01-21 14:17:02,219(4578) --> [main] com.activiti.study.MyProcessApp.getStringObjectMap(MyProcessApp.java:88): 请输入 姓名  
+[INFO ] 2020-01-21 14:17:08,438(10797) --> [main] com.activiti.study.MyProcessApp.getStringObjectMap(MyProcessApp.java:98): 您成功输入 [汪茂雄]  
+[INFO ] 2020-01-21 14:17:08,439(10798) --> [main] com.activiti.study.MyProcessApp.getStringObjectMap(MyProcessApp.java:88): 请输入 内容  
+[INFO ] 2020-01-21 14:17:14,043(16402) --> [main] com.activiti.study.MyProcessApp.getStringObjectMap(MyProcessApp.java:98): 您成功输入 [请教]  
+[INFO ] 2020-01-21 14:17:14,059(16418) --> [main] com.activiti.study.MyProcessApp.handlingTasks(MyProcessApp.java:58): 当前待处理任务id [16]，任务名称 [人事审批]  
+[INFO ] 2020-01-21 14:17:14,062(16421) --> [main] com.activiti.study.MyProcessApp.getStringObjectMap(MyProcessApp.java:88): 请输入 审批结果  
+[INFO ] 2020-01-21 14:17:20,736(23095) --> [main] com.activiti.study.MyProcessApp.getStringObjectMap(MyProcessApp.java:98): 您成功输入 [yes]  
+[INFO ] 2020-01-21 14:17:20,758(23117) --> [main] com.activiti.study.MyProcessApp.main(MyProcessApp.java:42):  App quit...  

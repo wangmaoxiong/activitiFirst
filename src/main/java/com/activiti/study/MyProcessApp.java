@@ -22,8 +22,8 @@ import java.util.Map;
 import java.util.Scanner;
 
 @SuppressWarnings("all")
-public class MainApp {
-    private static Logger LOGGER = LoggerFactory.getLogger(MainApp.class);
+public class MyProcessApp {
+    private static Logger LOGGER = LoggerFactory.getLogger(MyProcessApp.class);
 
     public static void main(String[] args) throws ParseException {
         LOGGER.info(" App start...");
@@ -124,7 +124,7 @@ public class MainApp {
         RepositoryService repositoryService = processEngine.getRepositoryService();//获取存储服务
         DeploymentBuilder deploymentBuilder = repositoryService.createDeployment();//创建部署构建器
         //通过类路径下的 .bpmn 文件进行构建。.bpmn 文件的本质其实就是一个定义好的 .xml 文件
-        deploymentBuilder.addClasspathResource("approvalFor2Level.bpmn");
+        deploymentBuilder.addClasspathResource("myProcess1.bpmn");
         //部署流程定义文件。此时 Activiti 会自动将 .bpmn 中的数据添加到数据库中，以备后续数据库操作
         Deployment deployment = deploymentBuilder.deploy();
         String deploymentId = deployment.getId();
